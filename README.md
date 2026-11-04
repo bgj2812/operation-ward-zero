@@ -1,0 +1,19 @@
+# Nursio SmartCare AI — Operation Ward Zero v3.0
+
+## Run on Windows
+1. Keep your v2 folder unchanged as a backup.
+2. Extract this folder separately as `ward-zero-v3`.
+3. Open PowerShell in this folder.
+4. Run `npm.cmd start`.
+5. Open http://localhost:3000. If v2 is still running, stop it with Ctrl+C first.
+
+Requires Node.js 20+. No npm packages are required.
+
+## Version 3 additions
+- Caregiver notes can be tagged English, Tamil, or Hindi.
+- Optional English summary field for human-entered summaries; automatic translation is not provided.
+- An active alert is escalated in place when a higher risk level is detected, preserving its history instead of creating repeated alerts.
+- JSON persistence, simulated sensor stream, caregiver workflow, event log and browser offline queue retained from v2.
+
+## Important limitations
+All readings are synthetic. Risk levels are transparent demonstration rules, not a trained or clinically validated model. No diagnosis, treatment recommendation, emergency dispatch, or validated 24–48-hour prediction is provided. Offline queue behavior is browser-side and must be tested; this is not production-grade power-loss resilience. Protect `data.json` and never enter real patient-identifiable or health information.
